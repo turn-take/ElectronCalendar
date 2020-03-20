@@ -2,6 +2,8 @@
 
 // Electronのモジュール
 const electron = require("electron");
+// Momentのモジュール
+const moment = require("moment");
 
 // アプリケーションをコントロールするモジュール
 const app = electron.app;
@@ -21,12 +23,23 @@ app.on('window-all-closed', function() {
 
 // Electronの初期化完了後に実行
 app.on('ready', function() {
+  // 当月をYYYY-MM形式で取得
+  const month = moment().format('YYYY-MM');
+
   // メイン画面の表示。ウィンドウの幅、高さを指定できる
   mainWindow = new BrowserWindow({width: 800, height: 650});
-  mainWindow.loadURL('file://' + __dirname + '/index.html');
+  // 初期表示は当月をパラメータで渡す
+  mainWindow.loadURL('file://' + __dirname + '/index.html?month=' + month);
 
   // ウィンドウが閉じられたらアプリも終了
   mainWindow.on('closed', function() {
     mainWindow = null;
   });
+
+  // ipc通信受信時の処理
+  const ipcMain = electron.ipcMain;
+  ipcMain.on('month', (event, arg) => {
+    // 受信した値をパラメータに渡して画面再読み込み
+    mainWindow.loadURL('file://' + __dirname + '/index.html?month=' + arg);
+  })
 });
