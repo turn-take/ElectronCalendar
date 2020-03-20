@@ -8,7 +8,13 @@
 </head>
 <body>
   <div class="calendar-wrapper">
-    <table class="calendar">
+    <div class="preMonthButton">
+      <button type="button" id="preMonth">＜先月</button>
+    </div>
+    <div class="nextMonthButton">
+      <button type="button" id="nextMonth">来月＞</button>
+    </div>
+    <table id="table" class="calendar">
       <caption id="caption"></caption>
       <thead>
         <tr>
@@ -22,7 +28,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="row1">
           <td id="cell1"></td>
           <td id="cell2"></td>
           <td id="cell3"></td>
@@ -31,7 +37,7 @@
           <td id="cell6"></td>
           <td id="cell7"></td>
         </tr>
-        <tr>
+        <tr id="row2">
           <td id="cell8"></td>
           <td id="cell9"></td>
           <td id="cell10"></td>
@@ -40,7 +46,7 @@
           <td id="cell13"></td>
           <td id="cell14"></td>
         </tr>
-        <tr>
+        <tr id="row3">
           <td id="cell15"></td>
           <td id="cell16"></td>
           <td id="cell17"></td>
@@ -49,7 +55,7 @@
           <td id="cell20"></td>
           <td id="cell21"></td>
         </tr>
-        <tr>
+        <tr id="row4">
           <td id="cell22"></td>
           <td id="cell23"></td>
           <td id="cell24"></td>
@@ -58,7 +64,7 @@
           <td id="cell27"></td>
           <td id="cell28"></td>
         </tr>
-        <tr>
+        <tr id="row5">
           <td id="cell29"></td>
           <td id="cell30"></td>
           <td id="cell31"></td>
@@ -66,6 +72,15 @@
           <td id="cell33"></td>
           <td id="cell34"></td>
           <td id="cell35"></td>
+        </tr>
+        <tr id="row6">
+          <td id="cell36"></td>
+          <td id="cell37"></td>
+          <td id="cell38"></td>
+          <td id="cell39"></td>
+          <td id="cell40"></td>
+          <td id="cell41"></td>
+          <td id="cell42"></td>
         </tr>
       </tbody>
     </table>

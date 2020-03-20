@@ -58,3 +58,12 @@
     border-radius: 30px;
     font-weight: bold;
 }
+
+.preMonthButton {
+    text-align: left;
+    float: left;
+}
+
+.nextMonthButton {
+    text-align: right;
+}
