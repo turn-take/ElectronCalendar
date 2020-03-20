@@ -1,0 +1,60 @@
+.calendar-wrapper {
+    width: 750px;
+}
+
+.calendar {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccddcc;
+    vertical-align: middle;
+}
+
+.calendar th,
+.calendar td {
+    padding: 10px 0;
+    border: 1px solid #cdcdcd;
+    text-align: center;
+    vertical-align: top;
+    font-size: 35px;
+}
+
+.calendar th {
+    background-color: #dedede;
+}
+
+/* 日曜日1行目（見出し） */
+.calendar th:first-child {
+    background-color: #e05557;
+    color: #ffffff;
+}
+
+/* 日曜日 */
+.calendar td:first-child {
+    color: #e05557;
+}
+
+/* 土曜日1行目（見出し） */
+.calendar th:last-child {
+    background-color: #207bcf;
+    color: #ffffff;
+}
+
+/* 土曜日 */
+.calendar td:last-child {
+    color: #207bcf;
+}
+
+/* 祝日 */
+.holiday {
+    color: #e05557;
+}
+
+.calendar caption {
+    margin: 0 0 10px 0;
+    padding: 10px;
+    font-size: 23px;
+    border: 5px solid #dedede;
+    border-radius: 30px;
+    font-weight: bold;
+}
