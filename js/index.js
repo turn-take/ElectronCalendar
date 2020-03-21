@@ -14,13 +14,13 @@ window.onload = function() {
     //先月ボタン押下時
     document.getElementById('preMonth').onclick = function() {
         ipcRenderer.sendSync('month',this.value);
-    }
+    };
 
     //来月ボタン押下時
     document.getElementById('nextMonth').onclick = function() {
         ipcRenderer.sendSync('month',this.value);
-    }
-}
+    };
+};
 
 /**
  * URLパラメータを分解してkey:valueの形式で返す。
@@ -90,5 +90,5 @@ const Callendar = function(month) {
         //来月(先月のmomentオブジェクトとなっているので＋2ヶ月)
         document.getElementById('nextMonth').value = __moment.add(2,'month').format("YYYY-MM");
         
-    }
-}
+    };
+};

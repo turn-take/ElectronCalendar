@@ -41,5 +41,5 @@ app.on('ready', function() {
   ipcMain.on('month', (event, arg) => {
     // 受信した値をパラメータに渡して画面再読み込み
     mainWindow.loadURL('file://' + __dirname + '/index.html?month=' + arg);
-  })
+  });
 });
