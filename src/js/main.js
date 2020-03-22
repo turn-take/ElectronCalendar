@@ -29,7 +29,7 @@ app.on('ready', function() {
   // メイン画面の表示。ウィンドウの幅、高さを指定できる
   mainWindow = new BrowserWindow({width: 800, height: 650});
   // 初期表示は当月をパラメータで渡す
-  mainWindow.loadURL('file://' + __dirname + '/index.html?month=' + month);
+  mainWindow.loadURL('file://' + __dirname + '/../view/index.html?month=' + month);
 
   // ウィンドウが閉じられたらアプリも終了
   mainWindow.on('closed', function() {
