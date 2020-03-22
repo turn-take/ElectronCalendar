@@ -59,6 +59,10 @@
     font-weight: bold;
 }
 
+.noDisplay {
+    display: none;
+}
+
 .preMonthButton {
     text-align: left;
     float: left;

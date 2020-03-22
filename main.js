@@ -35,11 +35,4 @@ app.on('ready', function() {
   mainWindow.on('closed', function() {
     mainWindow = null;
   });
-
-  // ipc通信受信時の処理
-  const ipcMain = electron.ipcMain;
-  ipcMain.on('month', (event, arg) => {
-    // 受信した値をパラメータに渡して画面再読み込み
-    mainWindow.loadURL('file://' + __dirname + '/index.html?month=' + arg);
-  });
 });
