@@ -37,3 +37,9 @@ const CalendarManager = function() { // eslint-disable-line
         }
     };
 };
+
+/**
+ * グローバルなCalendarManager変数
+ * アプリケション共通で利用する。
+ */
+const calendarManager = new CalendarManager();

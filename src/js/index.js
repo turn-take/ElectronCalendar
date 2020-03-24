@@ -12,16 +12,10 @@ const moment = require("moment");
 // 画面に表示されている月(YYYY-MM)
 let currentDispMonth;
 
-//Calendarオブジェクト管理用
-let calendarManager;
-
 window.onload = function() {
 
     //URL文字列から初期表示の月を取得
     const month = parseURLParam(location.search).month;
-
-    //CalendarManager生成
-    calendarManager = new CalendarManager();
 
     //初期表示の月から直近3か月のカレンダー作成
     createLatestCalendar(month);
